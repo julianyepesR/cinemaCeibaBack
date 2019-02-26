@@ -43,10 +43,9 @@ repositories {
 }
 
 dependencies {
-	// compile project(":dominio")
-	// compile project(":infraestructura")
+	compile project(":dominio")
+	compile project(":infraestructura")
 	
-
 	// implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	// implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation(

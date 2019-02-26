@@ -20,8 +20,8 @@ public class ApiExceptionHandle {
 	 * Handler generic exception.
 	 *
 	 */
-	@ExceptionHandler(ParqueaderoException.class)
-	public final ResponseEntity<Object> handlerGenericException( final ParqueaderoException exception, final WebRequest request ) {
+	@ExceptionHandler(CinemaException.class)
+	public final ResponseEntity<Object> handlerGenericException( final CinemaException exception, final WebRequest request ) {
 		return new ResponseEntity<>( exception.getDetalleError(), HttpStatus.NOT_ACCEPTABLE); 
 	}
 }

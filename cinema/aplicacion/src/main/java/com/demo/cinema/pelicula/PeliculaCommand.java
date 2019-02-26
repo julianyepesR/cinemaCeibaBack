@@ -5,115 +5,51 @@ import java.sql.Date;
 
 
 public class PeliculaCommand {
-        
-    private String key;
-    private String nombre;
-    private String apellido;
-    private String fechaNacimiento;
-    private String tipoSangre;
-    private String documentoIdentidad;
-    private String KeyPersona;
-    private Date fechaRegistro;
-    private Date fechaModificacion;
+
+	private String id;
+	private String titulo;
+	private Date fechaEstreno;
+	private String genero;
 
 
 
-    public PeliculaCommand(String key, String nombre, String apellido, String fechaNacimiento, String tipoSangre, String documentoIdentidad, String KeyPersona, Date fechaRegistro, Date fechaModificacion) {
-        this.key = key;
-        this.nombre = nombre;
-        this.apellido = apellido;
-        this.fechaNacimiento = fechaNacimiento;
-        this.tipoSangre = tipoSangre;
-        this.documentoIdentidad = documentoIdentidad;
-        this.KeyPersona = KeyPersona;
-        this.fechaRegistro = fechaRegistro;
-        this.fechaModificacion = fechaModificacion;
-    }
+	public PeliculaCommand(String id, String titulo, Date fechaEstreno, String genero) {
+		this.id = id;
+		this.titulo = titulo;
+		this.fechaEstreno = fechaEstreno;
+		this.genero = genero;
+	}
 
-    public String getKey() {
-        return key;
-    }
+	public String getId() {
+		return id;
+	}
 
-    public void setKey(String key) {
-        this.key = key;
-    }
+	public void setId(String id) {
+		this.id = id;
+	}
 
-    public String getNombre() {
-        return nombre;
-    }
+	public String getTitulo() {
+		return titulo;
+	}
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
 
-    public String getApellido() {
-        return apellido;
-    }
+	public Date getFechaEstreno() {
+		return fechaEstreno;
+	}
 
-    public void setApellido(String apellido) {
-        this.apellido = apellido;
-    }
+	public void setFechaEstreno(Date fechaEstreno) {
+		this.fechaEstreno = fechaEstreno;
+	}
 
-    public String getFechaNacimiento() {
-        return fechaNacimiento;
-    }
+	public String getGenero() {
+		return genero;
+	}
 
-    public void setFechaNacimiento(String fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
-    }
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
 
-    public String getTipoSangre() {
-        return tipoSangre;
-    }
-
-    public void setTipoSangre(String tipoSangre) {
-        this.tipoSangre = tipoSangre;
-    }
-
-    public String getDocumentoIdentidad() {
-        return documentoIdentidad;
-    }
-
-    public void setDocumentoIdentidad(String documentoIdentidad) {
-        this.documentoIdentidad = documentoIdentidad;
-    }
-
-    public String getKeyPersona() {
-        return KeyPersona;
-    }
-
-    public void setKeyPersona(String KeyPersona) {
-        this.KeyPersona = KeyPersona;
-    }
-
-    public Date getFechaRegistro() {
-        return fechaRegistro;
-    }
-
-    public void setFechaRegistro(Date fechaRegistro) {
-        this.fechaRegistro = fechaRegistro;
-    }
-
-    public Date getFechaModificacion() {
-        return fechaModificacion;
-    }
-
-    public void setFechaModificacion(Date fechaModificacion) {
-        this.fechaModificacion = fechaModificacion;
-    }
-
-    @Override
-    public String toString() {
-        return "{" +
-                "key=" + key +
-                ", nombre='" + nombre + '\'' +
-                ", apellido='" + apellido + '\'' +
-                ", fechaNacimiento=" + fechaNacimiento +
-                ", tipoSangre='" + tipoSangre + '\'' +
-                ", documentoIdentidad='" + documentoIdentidad + '\'' +
-                ", KeyPersona=" + KeyPersona +
-                ", fechaRegistro=" + fechaRegistro +
-                ", fechaModificacion=" + fechaModificacion +
-                '}';
-    }
 }

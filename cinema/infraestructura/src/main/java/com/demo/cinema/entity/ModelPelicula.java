@@ -8,11 +8,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.NamedQuery;
-
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.NoArgsConstructor;
+import javax.persistence.Table;
 
 
 /**
@@ -20,16 +16,13 @@ import lombok.NoArgsConstructor;
  * 
  */
 @Entity
-@NamedQuery(name="ModelPelicula.findAll", query="SELECT t FROM ModelPelicula t")
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
+@Table(name="Pelicula")
 public class ModelPelicula implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.AUTO)
-	private Long id;
+	private Integer id;
 
 	@Column(name="titulo")
 	private String titulo;
@@ -39,5 +32,37 @@ public class ModelPelicula implements Serializable {
 
 	@Column(name="fecha_estreno")
 	private Timestamp fechaEstreno;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public String getTitulo() {
+		return titulo;
+	}
+
+	public void setTitulo(String titulo) {
+		this.titulo = titulo;
+	}
+
+	public String getGenero() {
+		return genero;
+	}
+
+	public void setGenero(String genero) {
+		this.genero = genero;
+	}
+
+	public Timestamp getFechaEstreno() {
+		return fechaEstreno;
+	}
+
+	public void setFechaEstreno(Timestamp fechaEstreno) {
+		this.fechaEstreno = fechaEstreno;
+	}
 
 }

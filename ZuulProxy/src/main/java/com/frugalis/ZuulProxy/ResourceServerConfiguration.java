@@ -32,13 +32,13 @@ public class ResourceServerConfiguration extends ResourceServerConfigurerAdapter
 	@Override
 	public void configure(HttpSecurity http) throws Exception {
 		http
-		.authorizeRequests().antMatchers("/oauth/token", "/oauth/authorize**", "/publica", "/customer/pelicula/**").permitAll();
+		.authorizeRequests().antMatchers("/oauth/token", "/oauth/authorize**", "/publica", "/oauth/**").permitAll();
 		
 		http.requestMatchers()
 		
-//		.antMatchers("/customer/pelicula/**")
-//		.and().authorizeRequests()
-//		.antMatchers("/customer/pelicula/**").access("hasRole('USER')")
+		.antMatchers("/customer/pelicula/**")
+		.and().authorizeRequests()
+		.antMatchers("/customer/pelicula/**").access("hasRole('USER')")
 		
 		.and().requestMatchers()
 		.antMatchers("/privada")

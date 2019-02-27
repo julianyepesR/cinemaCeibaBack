@@ -15,10 +15,12 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.provisioning.InMemoryUserDetailsManager;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 @SpringBootApplication
 @EnableZuulProxy
 @EnableWebSecurity
+@CrossOrigin("*")
 public class ZuulProxyApplication extends WebSecurityConfigurerAdapter {
 
 	public static void main(String[] args) {

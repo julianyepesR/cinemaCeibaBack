@@ -10,6 +10,9 @@ import java.util.Date;
  */
 public class Pelicula implements Serializable {
 	
+	
+	// TODO : dejar solo get - mirar el tema de seriablizable
+	
 	private static final long serialVersionUID = 2790704236408771530L;
 
 	private Integer id;

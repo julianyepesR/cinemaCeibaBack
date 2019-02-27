@@ -28,6 +28,7 @@ public class SelectAllPeliculasController {
 	@Autowired
 	private SelectAllPeliculaQueryHandle queryHandler;
     
+	// TODO: mirar el tema de los verbos - peliculas (listar) :
 	@RequestMapping(value="/listar", method = RequestMethod.GET)
 	public ResponseEntity<Collection<Pelicula>> obtenerTipoVehiculos() {
 		return new ResponseEntity<>( queryHandler.handle(null) , HttpStatus.ACCEPTED);
